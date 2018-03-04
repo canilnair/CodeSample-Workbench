@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suitename]" parallel="classes">
+  <parameter name="browsername" value="firefox"/>
+  <test name="Chrome Test">
+    <parameter name="browsername" value="chrome"/>
+    <classes>
+      <class name="test.dragNdrop"/>
+    </classes>
+  </test> <!-- Chrome Test -->
+  <test name="FireFox Test">
+    <parameter name="browsername" value="firefox"/>
+    <classes>
+      <class name="test.dragNdrop"/>
+    </classes>
+  </test> <!-- FireFox Test -->
+  <test name="Chrome Test(failed)" parallel="classes">
+    <parameter name="browsername" value="chrome"/>
+    <classes>
+      <class name="test.dragNdrop">
+        <methods>
+          <include name="dragndrop2"/>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="dragndrop"/>
+          <include name="aftertest"/>
+          <include name="aftertest"/>
+        </methods>
+      </class> <!-- test.dragNdrop -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test name="FireFox Test(failed)" parallel="classes">
+    <parameter name="browsername" value="firefox"/>
+    <classes>
+      <class name="test.dragNdrop">
+        <methods>
+          <include name="dragndrop2"/>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="dragndrop"/>
+          <include name="aftertest"/>
+          <include name="aftertest"/>
+        </methods>
+      </class> <!-- test.dragNdrop -->
+    </classes>
+  </test> <!-- FireFox Test(failed) -->
+</suite> <!-- Failed suite [Suitename] -->

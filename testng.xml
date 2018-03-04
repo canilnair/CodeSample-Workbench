@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suitename" parallel="classes" thread-count="1">
+  <test name="Chrome Test">
+  <parameter name="browsername" value="chrome"></parameter>
+    <classes>
+      <class name="src.test.dragNdrop"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="FireFox Test">
+  <parameter name="browsername" value="firefox"></parameter>
+    <classes>
+      <class name="src.test.dragNdrop"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
